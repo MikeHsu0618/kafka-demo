@@ -1,0 +1,37 @@
+fullnameOverride: "vector-generator"
+
+role: "Stateless-Aggregator"
+
+
+service:
+  annotations: {}
+  enabled: false
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 100Mi
+
+customConfig:
+  sources:
+    dump_logs:
+      type: demo_logs
+      format: json
+      interval: 1
+    kafka-source:
+      bootstrap_servers: my-cluster-kafka-bootstrap:9092
+      group_id: my-consumer-group
+      topics:
+        - my-topic
+      type: kafka
+
+  sinks:
+    kafka-sink:
+      type: kafka
+      bootstrap_servers: my-cluster-kafka-bootstrap:9092
+      topic: my-topic
+      encoding:
+        codec: json
+      inputs:
+        - kafka-source
+

@@ -1,0 +1,14 @@
+# helm upgrade --install kafka-ui kafka-ui/kafka-ui -f kafka-ui-values.yaml
+replicaCount: 1
+
+fullnameOverride: "kafka-ui"
+
+service:
+  type: LoadBalancer
+  port: 8000
+
+yamlApplicationConfig:
+  kafka:
+    clusters:
+      - bootstrapServers: my-cluster-kafka-bootstrap.default:9092
+        name: my-cluster-kafka
