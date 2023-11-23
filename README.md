@@ -1,7 +1,9 @@
 Kafka Demo
 ---
 
-Provision a Kafka cluster without Zookeeper ensemble and production ready related stack on Kubernetes.
+Provision a Kafka cluster without Zookeeper ensemble and production ready related stacks on Kubernetes.
+
+Including Kafka Management, Operatrion, Testing, Consumer, Auto-scaling.
 
 ---
 ### Kafka (Kraft mode)
