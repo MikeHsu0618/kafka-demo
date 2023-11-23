@@ -3,6 +3,7 @@ Kafka Demo
 
 Provision a Kafka cluster without Zookeeper ensemble and production ready related stack on Kubernetes.
 
+---
 ### Kafka (Kraft mode)
 
  - version: 3.6.0
