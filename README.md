@@ -5,6 +5,8 @@ Provision a Kafka cluster without Zookeeper ensemble and production ready relate
 
 Including Kafka Management, Operatrion, Testing, Consumer, Auto-scaling.
 
+![architecture](./arch.png)
+
 ---
 ### Kafka (Kraft mode)
 
